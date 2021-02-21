@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/products1",
+            "lambdaFunction": "ebuy28c2140f",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET"
+                ],
+                "unauth": [
+                    "/GET"
+                ]
+            }
+        }
+    ],
+    "resourceName": "apieebea64f",
+    "apiName": "apieebea64f",
+    "functionArns": [
+        {
+            "lambdaFunction": "ebuy28c2140f"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-ebuy-ebuyenv-202234-authRole",
+        "unAuthRoleName": "amplify-ebuy-ebuyenv-202234-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "ebuy28c2140f",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

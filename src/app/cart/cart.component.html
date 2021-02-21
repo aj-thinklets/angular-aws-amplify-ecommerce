@@ -1,0 +1,24 @@
+<!--<app-nav></app-nav>
+<h1>Total Products in your cart are: {{cartProductCount}}</h1>
+<button class="btn-primary" (click)="cart()">Add Product</button> -->
+<div class="product-cart" *ngIf="cartItems && cartItems.length > 0">
+    <ul>
+        <li *ngFor="let item of cartItems">
+            <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+            {{item.productName}}
+            <span>{{item.price  | currency:'INR'}}</span>
+            <button type="button" class="close" aria-label="Remove Item" (click)="removeItemFromCart(item.id)">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </li>
+    </ul>
+    <div class="cart-total">
+        <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="emptyCart()">Empty Cart</button></p>
+        <p><button type="button" class="btn btn-primary btn-sm" (click)="confirmOrder()">Confirm Order</button></p>
+        <p class="text-right">
+            <strong class="d-block">Total:</strong>
+            <span class="d-block">{{totalAmmount | currency:'INR'}}</span>
+        </p>
+    </div>
+</div>
+

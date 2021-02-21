@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+
+<div style="width: 80%; margin: 25px auto">
+    <h4 class="text-secondary">Looks like you have new product in the inventory!</h4>
+    <form [formGroup]="productform" (ngSubmit)="onSave(productform)">
+        <div class="form-group">
+            <label>Product Name</label>
+            <input type="text" class="form-control" formControlName="productName" placeholder="Enter product name">
+        </div>
+        <div class="form-group">
+            <label>Product Price</label>
+            <input type="number" class="form-control" formControlName="price" placeholder="Enter product price">
+        </div>
+        <div class="form-group">
+            <label>Product Description</label>
+            <input type="text" class="form-control" formControlName="description"
+                placeholder="Enter the product description">
+        </div>
+        <button type="submit" [disabled]="!productform.valid" class="btn btn-primary mr-2">Save</button>
+        <button type="submit" [disabled]="!productform.valid" (click)="onCancel()"
+            class="btn btn-danger">Cancel</button>
+    </form>
+</div>
+
+<app-cart></app-cart>
+

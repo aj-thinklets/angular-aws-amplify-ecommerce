@@ -1,0 +1,5 @@
+{
+    "tableName": "products-ebuyenv",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S"
+}
