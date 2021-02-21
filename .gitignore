@@ -6,13 +6,14 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
+/amplify
+
 
 # dependencies
 /node_modules
-/amplify
 **/src/environments/environment.prod.ts
 **/src/environments/environment.ts
-**/amplify/**
+
 
 # profiling files
 chrome-profiler-events*.json
